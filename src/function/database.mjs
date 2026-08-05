@@ -428,7 +428,7 @@ export default {
 		Settings: {
 			CacheSize: 20,
 			ShowOnly: false,
-			Position: "Reverse",
+			Position: "Forward",
 			Offset: 0,
 			Tolerance: 1000,
 		},
