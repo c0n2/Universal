@@ -12,7 +12,7 @@ console.log(
   JSON.stringify(data)
 );
 
-for (const name of ["Universal", "Composite", "API"]) {
+for (const name of ["Universal", "Composite", "Translate", "API"]) {
   data[name] ||= {};
 
   if (typeof data[name].Settings === "string") {
