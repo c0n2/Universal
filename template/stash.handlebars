@@ -109,6 +109,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/vod-(.+)-amt\.tv\.apple\.com\/itunes-assets\/(.+)\/([0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12})\/(.+)\.webvtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -130,6 +131,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/vod-(.+)-(aoc|svod)\.tv\.apple\.com\/itunes-assets\/(.+)\/([0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12})\/(.+)\.webvtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -147,12 +149,13 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/(hls|hls-svod)\.itunes\.apple\.com\/itunes-assets\/(.+)\/([0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12})\/(.+)\.webvtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
       require-body: true
 
-    - match: ^https?:\/\/(.+)\.(media|prod)\.(dssott|starott|dssedge)\.com\/(.+\/)?ps01\/disney\/([0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12})\/(cbcs|ctr)-all-(.+)\.m3u8
+    - match: ^https?:\/\/(.+)\.(media|prod)\.(dssott|starott|dssedge)\.com\/(.+\/)?ps01\/disney\/([0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12})\/(cbcs|ctr|unenc|una-cbcs)-all-(.+)\.m3u8
       name: 🍿️ DualSubs.M3U8.Master.response
       type: response
       require-body: true
@@ -164,6 +167,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/(.+)\.(media|prod)\.(dssott|starott|dssedge)\.com\/(.+\/)?ps01\/disney\/([0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12})\/r\/(.+)\.vtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -201,14 +205,17 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/(d1v5ir2lpwr8os|d22qjgkvxw22r6|d25xi40x97liuc|d27xxe7juh1us6|dmqdd6hw24ucf)\.cloudfront\.net\/(.+)\/([0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12})\.(vtt|ttml2)\?(.*)subtype=(Official|External)
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/cf-timedtext\.aux\.pv-cdn\.net\/(.+)\/([0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12})\.(vtt|ttml2)\?(.*)subtype=(Official|External)
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/s3\.amazonaws\.com\/aiv-prod-timedtext\/(.+)\/([0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12})\.(vtt|ttml2)\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -234,6 +241,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/(cf|akm|gcp|fly|.+)\.pro?d\.media\.(h264\.io|max\.com)\/(.+)\.vtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -251,6 +259,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/(.+)\.hbomaxcdn\.com\/videos\/(.+)\.vtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -276,6 +285,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/(assets\.huluim\.com|assetshuluimcom-a\.akamaihd\.net)\/captions_webvtt\/(.+)\.vtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -293,10 +303,12 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/cc\.cbs\.com\/closedcaption\/(.+)\.vtt\?(.*)subtype=(Official|External)
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/(vod-(.+)|(.+)\.airspace-(.+)|(.+)-pplus)\.(cbsaavideo|cbsivideo|cbs)\.com\/(.+)\.vtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -322,6 +334,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/dplus-ph-(prod-vod\.akamaized\.net|google-v2\.prod-vod\.h264\.io)\/(.+)\.vtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -339,6 +352,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/(.+)\.cdn\.peacocktv\.com\/pub\/global\/(.+)\/cmaf\/(.+)\/[^\/]*subtitles[^\/]*\.webvtt
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -356,6 +370,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/(.+)-vod\.fubo\.tv\/(.+)\/manifests\/subtitles\/(.+)\.vtt
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -373,6 +388,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/hls\.ted\.com\/(.+)\/subtitles\/(.+)\.vtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -390,6 +406,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/pubads\.g\.doubleclick\.net\/ondemand\/hls\/content\/(.+)\/(hls-webvtt|vtt)\/(.+)\.vtt
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -403,6 +420,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/vod-sub-(.+)(\.live\.cf\.md\.bbci\.co\.uk|-live\.akamaized\.net)\/iplayer\/subtitles\/(.+)(\.cc)?\.xml
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -420,10 +438,12 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/(.+)\.content\.britbox\.co\.uk\/(.+)\/Subtitles\/(.+)\.vtt\?(.*)subtype=(Official|External)
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/(.+)\.content\.britbox\.co\.uk\/(.+)\.ism\/(.+)-textstream(.+)\.webvtt
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -437,6 +457,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/api\.britbox\.com\/v1\/subtitles
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -454,6 +475,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/(.+)\.starz\.com\/(.+)\/captions\/(.+)\.vtt
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -471,10 +493,12 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/redirector\.playback\.(.+)\.prod\.deploys\.brightcove\.com\/v1\/(.+)\.vtt\?(.*)subtype=(Official|External)
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/amcplus-(.+)\.akamaized\.net\/composite-media\/v1\/hls\/(.+)\/segment(\d+)\.vtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -505,6 +529,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/(.+)\.cssott\.com\/(.+)\/mpeg_cbcs\/(.+)\/(.+)\.subtitles\.\d+\.split\.\d+\.webvtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -522,6 +547,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/api\.viki\.io\/(.+)\/auth_subtitles\/(\w+)\.vtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -543,10 +569,12 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/epixhls\.akamaized\.net\/(vam|movies)\/(.+)\/subtitles\/(.+)\/([0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12})\?(.*)subtype=(Official|External)
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/epixhls\.akamaized\.net\/(vam|movies)\/(.+)\/captions_\d+\/(.+)\/fileSequence\d+\.webvtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -568,6 +596,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/(.+)\.live\.epix\.services\/out\/(.+)\/index_5_\d+_\d+\.vtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -585,6 +614,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/media-production\.nebula\.app\/(.+)\/subtitles\/(.+)\/main\.(\w+)\.vtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -602,6 +632,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/(.+)\.plutotv\.net\/(.+)\/hls\/(.+)\/(\w+\.m3u8_)?(\d+)\.vtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response
@@ -619,6 +650,7 @@ http:
       name: 🍿️ DualSubs.Composite.Subtitles.response
       type: response
       require-body: true
+      argument: 'Position=Forward'
     - match: ^https?:\/\/(.+)\.mubicdn\.net\/stream\/(.+)\/drm_playlist\.(\w+)\.ism\/default\/drm_playlist\.(\w+)-textstream_(.+)\.webvtt\?(.*)subtype=Translate
       name: 🍿️ DualSubs.Translate.response
       type: response

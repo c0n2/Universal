@@ -79,7 +79,7 @@ export default defineConfig({
 		{
 			key: "Position",
 			name: "[字幕] 主语言（源语言）字幕位置",
-			defaultValue: "Reverse",
+			defaultValue: "Forward",
 			type: "string",
 			description: "主语言（源语言）字幕的显示位置。",
 			options: [
